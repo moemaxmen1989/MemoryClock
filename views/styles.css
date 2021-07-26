@@ -1,0 +1,118 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap');
+
+body{
+   background-color: #055052;
+   font-family: 'Comfortaa', cursive;
+   color: white;
+   margin: 0;
+   font-weight: bolder;
+  
+}
+/*Navbar Section*/
+
+.navbar {
+
+  width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+
+}
+
+.navbar ul {
+list-style: none;
+display: flex;
+
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+
+
+.navbar::before,
+.navbar::after {
+
+    content: '';
+    position: absolute;
+    height: 500px;
+    bottom: 1000px;
+    right: 0px;
+    left: 0px;
+    background-color: white;
+    opacity: 0.1;
+    transform: skewY(-16deg);
+   
+    
+    z-index: 1;
+    
+
+}
+
+a:hover{
+
+    border: 2px solid white;
+    border-radius: 15px;
+    z-index: 100;
+   
+}
+
+/*Name and Enter section*/
+
+.btn-start {
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    font-size: 2.5rem;
+    border-radius: 10px;
+    padding: 10px;
+    height: 3rem;;
+    width: 20rem;
+    text-align: center;
+    align-items: center;
+    font-weight: 2000;
+}
+
+
+.form-card{
+
+    width: 20rem;
+    height: 4rem;
+    font-size: 2.5rem;
+    margin-left: 10px;
+    border:none;
+    border-radius: 10px;
+    background-color: #fcfbe6;
+    }
+
+.before{
+
+
+    display: none;
+}
+
+
+input[type='text']{
+
+padding-left: 4rem;
+
+
+}
+
+
+
+.container .grid{
+
+    height: 200px;
+    
+
+}

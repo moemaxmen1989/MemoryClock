@@ -1,0 +1,36 @@
+
+
+.container {
+margin-top: 60px;
+margin-left: 30px;
+width: 100%;
+max-width: 1500px;
+
+
+
+
+}
+
+img{
+
+    width: 100%;
+}
+
+h1{
+
+    font-size: 3rem;
+}
+
+.grid{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    
+}
+
+.btn{
+
+background-color: #F3F2C9;
+
+}
