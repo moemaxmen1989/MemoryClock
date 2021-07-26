@@ -1,3 +1,13 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+button {
+    font-family: inherit;
+}
+
 .container {
     margin-top: 5px;
     margin-left: 30px;
@@ -21,4 +31,6 @@ h1 {
 
 .btn {
     background-color: #f3f2c9;
+    outline: none;
+    border: none;
 }

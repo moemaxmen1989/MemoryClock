@@ -45,6 +45,47 @@
         <!---->
 
         <!--***Section 3 ***-->
+        <section class="main-container">
+            <div class="grid-container" id="gridContainer">
+                <!-- empty for now -->
+                <!-- Work in progress -->
+            </div>
+
+            <div class="actions">
+                <button type="button" class="btn btn-submit">Submit</button>
+                <div class="timer">
+                    <i class="fas fa-clock"></i>
+                    <p id="timer">30</p>
+                    seconds
+                </div>
+            </div>
+
+            <template id="coloredCox">
+                <div class="colored-box-container">
+                    <div class="colored-box hover"></div>
+                </div>
+            </template>
+
+            <!-- TEMP CODE -->
+            <script>
+                function getRandomInt(max) {
+                    return Math.floor(Math.random() * max)
+                }
+
+                const template = document.querySelector("#coloredCox")
+                const container = document.querySelector("#gridContainer")
+                const SIZE = 6
+
+                for (let i = 0; i < SIZE; i++) {
+                    console.log("i: ", i)
+                    const clonedBox = template.content.cloneNode(true)
+                    const clonedDiv = clonedBox.querySelector(".colored-box")
+                    clonedDiv.style.backgroundColor = `rgb(${getRandomInt(255)}, ${getRandomInt(255)}, ${getRandomInt(255)})`
+                    console.log("clonedDiv: ", clonedDiv.style)
+                    container.append(clonedBox)
+                }
+            </script>
+        </section>
         <!--Main layout for boxes-->
         <!--Enter button-->
         <!--Timer-->
