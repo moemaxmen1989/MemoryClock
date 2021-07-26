@@ -27,7 +27,7 @@ body {
     text-decoration: none;
     color: white;
     margin: 0 10px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 10px;
 }
 
@@ -35,13 +35,17 @@ body {
 .navbar::after {
     content: "";
     position: absolute;
-    height: 500px;
-    bottom: 1000px;
+    height: 200px;
+    bottom: 500px;
     right: 0px;
     left: 0px;
-    background-color: white;
+    background-color: rgb(197, 186, 186);
     opacity: 0.1;
     transform: skewY(-16deg);
+    -webkit-transform: skewY(-16deg);
+    -moz-transform: skewY(-16deg);
+    -ms-transform: skewY(-16deg);
+
 
     z-index: 1;
 }
