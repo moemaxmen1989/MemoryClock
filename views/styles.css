@@ -46,7 +46,6 @@ body {
     -moz-transform: skewY(-16deg);
     -ms-transform: skewY(-16deg);
 
-
     z-index: 1;
 }
 
@@ -65,7 +64,7 @@ a:hover {
     font-size: 2.5rem;
     border-radius: 10px;
     padding: 10px;
-    height: 3rem;
+    height: 4rem;
     width: 20rem;
     text-align: center;
     align-items: center;
@@ -93,4 +92,72 @@ input[type="text"] {
 .container.grid {
     margin-top: 150px;
     height: 200px;
+}
+
+/* main layout section */
+.main-container {
+    margin: 0 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main-container .grid-container {
+    min-height: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.main-container .grid-container .colored-box-container {
+    display: grid;
+    place-items: center;
+}
+
+.main-container .grid-container .colored-box-container .colored-box {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    margin: auto;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.hover {
+    transition: transform 0.15s ease-in-out;
+}
+.hover:hover {
+    transform: scale(1.03);
+}
+.hover:active {
+    transform: scale(1.02);
+}
+
+.main-container .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-container .actions .timer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.main-container .actions .timer p {
+    margin: 0;
+}
+
+.btn-submit {
+    font-size: 1.2rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0.5rem;
+    transition: filter 0.15s ease-in-out;
+    transition: transform 0.1s ease-in-out;
+}
+.btn-submit:hover {
+    filter: brightness(0.93);
+}
+.btn-submit:active {
+    transform: scale(0.98);
 }
