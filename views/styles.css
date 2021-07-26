@@ -110,8 +110,9 @@ padding-left: 4rem;
 
 
 
-.container .grid{
+.container.grid{
 
+    margin-top: 150px;
     height: 200px;
     
 
