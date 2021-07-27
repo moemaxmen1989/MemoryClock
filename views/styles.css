@@ -7,10 +7,10 @@ body {
     margin: 0;
     font-weight: bolder;
 }
-/*Navbar Section*/
+/*Section1 ------------------------Navbar Section*/
 
 .navbar {
-    width: 100%;
+    
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -55,7 +55,7 @@ a:hover {
     z-index: 100;
 }
 
-/*Name and Enter section*/
+/* Section2 ------------------------Name and Enter section*/
 
 .btn-start {
     text-decoration: none;
@@ -90,10 +90,16 @@ input[type="text"] {
 }
 
 .container.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap:10rem;
+ 
     margin-top: 150px;
+    margin-left: 20%;
+    margin-right: 20%;
     height: 200px;
 }
-
+/*Section3 ------------------------*/
 /* main layout section */
 .main-container {
     margin: 0 10%;
@@ -156,8 +162,108 @@ input[type="text"] {
     transition: transform 0.1s ease-in-out;
 }
 .btn-submit:hover {
-    filter: brightness(0.93);
+    filter: brightness(0.93); 
 }
 .btn-submit:active {
     transform: scale(0.98);
 }
+
+
+
+/*media queries*/
+
+
+/* Extra small devices (phones, 600px and down) */
+
+@media screen and (max-width: 600px) {
+
+
+    /* Section 1 ---- Navbar*/
+    .navbar{
+        width: 100%;
+        grid-gap: 110px;
+       justify-content: space-around;
+        position: relative;}
+    .menu {
+      display: none;
+    }
+   
+h1 {
+    size: 0.5px;
+}
+.fa-clock{
+   font-size: 0px;
+}
+
+
+
+.fa-bars {
+
+    font-size: 2rem;
+    align-items: center;
+    margin: 10px 10px;
+
+}
+/****/
+
+/*Section 2 * Start and Play*/
+.container.grid {
+  grid-template-columns: 1fr;
+  margin:0 15%;
+  margin-top: 20%;
+  grid-gap:1rem;
+ 
+
+}
+
+
+
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media screen and (min-width: 600px) {
+   
+  .modal {
+    display: none;
+}
+
+
+
+}
+
+/*Special sizing for container*/
+@media only screen and (min-width: 600px) and (max-width: 1080px)  {
+
+    .container.grid {
+    
+        grid-gap:0.9rem;
+       margin:0 25%;
+        margin-top:10% ;
+   grid-template-columns: 1fr;
+      }
+      a {
+       font-size:4px ;
+      }
+.high-scores{
+display: none;
+
+}
+
+
+
+}
+
+
+/*****/
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+
+
+
+
+}
+
