@@ -240,6 +240,21 @@ display: grid;
 grid-template-columns: 1fr;
 grid-gap:1.5rem;
 
+}
+.btn.btn-start{
+
+    font-size: 1.75rem;
+    padding: 15px;
+    height: 4rem;
+    width: 15rem;
+    
+}
+.form-card {
+    width: 15rem;
+    height: 4rem;
+    font-size: 1.75rem;
+    margin-left: 10px;
+
 
 }
 
