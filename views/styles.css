@@ -10,27 +10,21 @@ body {
 /*Section1 ------------------------Navbar Section*/
 
 .navbar {
-    
     display: flex;
- 
+
     align-items: center;
     justify-content: space-between;
     z-index: 100;
 }
 
 .form {
-    
     display: flex;
- 
+
     align-items: center;
     margin-bottom: auto;
     justify-content: space-between;
     z-index: 100;
 }
-
-
-
-
 
 .navbar ul {
     list-style: none;
@@ -74,8 +68,6 @@ a:hover {
     z-index: 100;
 }
 
-
-
 /* Section2 ------------------------Name and Enter section*/
 
 .btn-start {
@@ -113,11 +105,10 @@ input[type="text"] {
 .container.grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap:10rem;
- 
+    grid-gap: 10rem;
+
     margin-top: 150px;
-    margin-left: 20%;
-    margin-right: 20%;
+    justify-content: center;
     height: 200px;
 }
 /*Section3 ------------------------*/
@@ -183,137 +174,97 @@ input[type="text"] {
     transition: transform 0.1s ease-in-out;
 }
 .btn-submit:hover {
-    filter: brightness(0.93); 
+    filter: brightness(0.93);
 }
 .btn-submit:active {
     transform: scale(0.98);
 }
 
-
-
 /*media queries*/
-
 
 /* Extra small devices (phones, 600px and down) */
 
 @media screen and (max-width: 600px) {
-
-
     /* Section 1 ---- Navbar*/
-    .navbar{
+    .navbar {
         width: 100%;
         grid-gap: 110px;
-       justify-content: space-around;
-        position: relative;}
-    .menu {
-      display: none;
+        justify-content: space-around;
+        position: relative;
     }
-   
-h1 {
-    size: 0.5px;
+    .menu {
+        display: none;
+    }
+
+    h1 {
+        size: 0.5px;
+    }
+    .fa-clock {
+        font-size: 0px;
+    }
+
+    .fa-bars {
+        font-size: 2rem;
+        align-items: center;
+        margin: 10px 10px;
+    }
+    /****/
+
+    /*Section 2 * Start and Play*/
+    .container.grid {
+        grid-template-columns: 1fr;
+        place-items: center;
+        margin-top: 20%;
+        grid-gap: 1rem;
+    }
+    .form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1.5rem;
+    }
+    .btn.btn-start {
+        font-size: 1.75rem;
+        padding: 15px;
+        height: 4rem;
+        width: 15rem;
+    }
+    .form-card {
+        width: 15rem;
+        height: 4rem;
+        font-size: 1.75rem;
+        margin-left: 10px;
+    }
 }
-.fa-clock{
-   font-size: 0px;
-}
-
-
-
-.fa-bars {
-
-    font-size: 2rem;
-    align-items: center;
-    margin: 10px 10px;
-
-}
-/****/
-
-/*Section 2 * Start and Play*/
-.container.grid {
-  grid-template-columns: 1fr;
-  margin:0 15%;
-  margin-top: 20%;
-  grid-gap:1rem;
- }
-.form {
-
-display: grid;
-grid-template-columns: 1fr;
-grid-gap:1.5rem;
-
-}
-.btn.btn-start{
-
-    font-size: 1.75rem;
-    padding: 15px;
-    height: 4rem;
-    width: 15rem;
-    
-}
-.form-card {
-    width: 15rem;
-    height: 4rem;
-    font-size: 1.75rem;
-    margin-left: 10px;
-
-
-}
-
-
-}
-
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 
 @media screen and (min-width: 600px) {
-   
-  .modal {
-    display: none;
-}
-
-
-
+    .modal {
+        display: none;
+    }
 }
 
 /*Special sizing for container*/
-@media only screen and (min-width: 600px) and (max-width: 1080px)  {
-
+@media only screen and (min-width: 600px) and (max-width: 1080px) {
     .container.grid {
-    
-        grid-gap:0.9rem;
-       margin:0 25%;
-        margin-top:10% ;
-   grid-template-columns: 1fr;
-      }
-      .form {
-
+        grid-gap: 0.9rem;
+        place-items: center;
+        margin-top: 10%;
+        grid-template-columns: 1fr;
+    }
+    .form {
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap:1.5rem;
-        
-        
-        }
+        grid-gap: 1.5rem;
+    }
 
-
-
-    
-.high-scores{
-display: none;
-
+    .high-scores {
+        display: none;
+    }
 }
-
-
-
-}
-
 
 /*****/
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
-
-
-
-
 }
-
