@@ -1,23 +1,13 @@
-// play
-const play = document.getElementById("playbutton")
-const start = document.getElementById("start")
-
-play.addEventListener("click", (e) => {
+document.getElementById("btn1").addEventListener("click", (e) => {
     e.preventDefault()
-    document.getElementById("form").classList.remove("before")
-    document.getElementById("start").classList.remove("before")
-    play.classList.add("before")
+    document.getElementById("btn1").classList.add("before")
+    document.getElementById("btn2").classList.remove("before")
+    document.getElementById("input1").classList.remove("before")
 })
 
-//after they enter name
-document.getElementById("main-form").addEventListener("submit", (e) => {
+document.getElementById("btn2").addEventListener("click", (e) => {
     e.preventDefault()
 
-    document.getElementById("pause").classList.remove("before")
-    document.getElementById("form").classList.add("before")
-    document.getElementById("start").classList.add("before")
-})
-
-document.getElementById("pause").addEventListener("click", (e) => {
-    e.preventDefault()
+    document.getElementById("btn2").classList.add("before")
+    document.getElementById("input1").classList.add("before")
 })

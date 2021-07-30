@@ -21,9 +21,9 @@ body {
 .form {
     display: flex;
 
-    align-items: center;
     margin-bottom: auto;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     z-index: 100;
 }
 
@@ -40,24 +40,6 @@ body {
     padding: 10px;
 }
 
-.navbar::before,
-.navbar::after {
-    content: "";
-    position: absolute;
-    height: 200px;
-    bottom: 990px;
-    right: 0px;
-    left: 0px;
-    background-color: rgb(197, 186, 186);
-    opacity: 0.1;
-    transform: skewY(-16deg);
-    -webkit-transform: skewY(-16deg);
-    -moz-transform: skewY(-16deg);
-    -ms-transform: skewY(-16deg);
-
-    z-index: 1;
-}
-
 a:hover {
     border: 2px solid white;
     border-radius: 15px;
@@ -71,47 +53,55 @@ a:hover {
 
 /* Section2 ------------------------Name and Enter section*/
 
-.btn-start {
-    text-decoration: none;
-    color: black;
-    margin: 0 10px;
-    font-size: 2.5rem;
-    border-radius: 10px;
-    padding: 10px;
-    height: 4rem;
-    width: 20rem;
+.section2 {
+    margin: 40px auto;
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+}
+.btn {
+    min-width: 70px;
+    border: none;
+    color: white;
+    padding: 16px 32px;
     text-align: center;
-    align-items: center;
-    font-weight: 2000;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 10px;
 }
 
-.form-card {
-    width: 20rem;
-    height: 4rem;
-    font-size: 2.5rem;
-    margin-left: 10px;
-    border: none;
-    border-radius: 10px;
-    background-color: #fcfbe6;
+.start {
+    background-color: #53b8bb;
+    color: black;
+    border: 2px solid #4caf50;
+}
+
+.btn.start:hover {
+    background-color: #f3f2c9;
+    color: black;
 }
 
 .before {
     display: none;
 }
 
-input[type="text"] {
-    padding-left: 4rem;
+.input1 {
+    height: 60px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 5px auto;
+    text-align: center;
 }
 
-.container.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 10rem;
-
-    margin-top: 150px;
-    justify-content: center;
-    height: 200px;
+#btn1 {
+    min-width: 250px;
 }
+
 /*Section3 ------------------------*/
 /* main layout section */
 .main-container {
@@ -252,6 +242,10 @@ input[type="text"] {
 @media screen and (min-width: 600px) and (max-width: 768px) {
     .container .navbar {
         max-width: 600px;
+    }
+
+    .high-scores {
+        display: none;
     }
 }
 
