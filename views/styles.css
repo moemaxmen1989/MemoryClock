@@ -200,12 +200,36 @@ a:hover {
 .btn-submit:active {
     transform: scale(0.98);
 }
+/*---------------Section 4----------------------Footer*/ 
+
+.footer{
+max-width: 1080px;
+margin: 40px auto;
+display: flex;
+justify-content:center;
+gap:2rem;
+
+}
+#footer {
+    
+    bottom: 0px;
+    background-color:transparent;
+    width: 100%;
+    text-align: left;
+}
+
+
 
 /*media queries*/
 /* Extra Extra small devices (phones, 320px and down) */
 @media screen and (max-width: 320px) {
     h1 {
         font-size: 1.75rem;
+    }
+
+    .footer{
+
+        display: none;
     }
 }
 
@@ -259,6 +283,16 @@ a:hover {
         font-size: 1.75rem;
         margin-left: 10px;
     }
+
+
+
+    .footer{
+
+        display: none;
+    }
+
+
+    
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
