@@ -19,12 +19,12 @@
 
                 <div class="menu">
                     <ul>
-                        <li><a href="">Home</a></li>
+                        <li><a href="index.html">Home</a></li>
                         <li>
                             <a href="" class="High-scores">High Scores <i class="fas fa-map-marker" id="clock"></i></a>
                         </li>
                         <li>
-                            <a href="">Premium <i class="fas fa-lock"></i></a>
+                            <a href="/views/Premium.html">Premium <i class="fas fa-lock"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -33,7 +33,7 @@
                     <a href="javascript:void(0);" onclick="myFunction()"><i class="fas fa-bars"></i></a>
                     <div id="myLinks" class="topnav before">
                         <a href="#news">Login</a>
-                        <a href="#contact">Premium</a>
+                        <a href="/views/Premium.html">Premium</a>
                         <a href="#about">High-scores</a>
                     </div>
                 </div>
@@ -55,8 +55,11 @@
         <!---->
 
         <!--***Section 3 ***-->
-        <section class="main-container">
-            <div class="grid-container" id="gridContainer">
+        <section class="main-container hidden" id="gameContainer">
+            <div class="level-container">
+                <h3>Level 1</h3>
+            </div>
+            <div class="grid-container col-6" id="gridContainer">
                 <!-- empty for now -->
                 <!-- Work in progress -->
             </div>
@@ -75,35 +78,33 @@
                     <div class="colored-box hover"></div>
                 </div>
             </template>
-
-            <!-- TEMP CODE -->
-            <script>
-                function getRandomInt(max) {
-                    return Math.floor(Math.random() * max)
-                }
-
-                const template = document.querySelector("#coloredCox")
-                const container = document.querySelector("#gridContainer")
-                const SIZE = 6
-
-                for (let i = 0; i < SIZE; i++) {
-                    console.log("i: ", i)
-                    const clonedBox = template.content.cloneNode(true)
-                    const clonedDiv = clonedBox.querySelector(".colored-box")
-                    clonedDiv.style.backgroundColor = `rgb(${getRandomInt(255)}, ${getRandomInt(255)}, ${getRandomInt(255)})`
-                    console.log("clonedDiv: ", clonedDiv.style)
-                    container.append(clonedBox)
-                }
-            </script>
         </section>
-        <!--Main layout for boxes-->
-        <!--Enter button-->
-        <!--Timer-->
         <!---->
 
         <!--***Section 4 ***-->
         <!--Footer-->
-        <!---->
+        <div class="container footer">
+            <div>
+                <h3>Check out our other games</h3>
+                <ul>
+                    <li>Speed-Test</li>
+                    <li>Puzzle-maze</li>
+                    <li>Mystery Plaza</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Link with us on Social Media</h3>
+                <ul>
+                    <li>Facebook <i class="fab fa-facebook"></i></li>
+                    <li>Twitter <i class="fab fa-twitter"></i></li>
+                    <li>Instagram <i class="fab fa-Instagram"></i></li>
+                </ul>
+            </div>
+        </div>
+        <div id="footer">&copy; All rights reserved</div>
     </body>
-    <script src="/views/main.js"></script>
+    <script src="./game.js" defer></script>
+    <script src="/views/main.js" defer></script>
+    <script src="./game-logic.js" defer></script>
 </html>
