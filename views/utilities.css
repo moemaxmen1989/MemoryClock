@@ -39,3 +39,7 @@ img {
     outline: none;
     border: none;
 }
+
+.hidden {
+    display: none !important;
+}

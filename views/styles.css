@@ -97,6 +97,10 @@ a:hover {
     text-align: center;
 }
 
+.input1.error {
+    border-color: rgb(250, 101, 101);
+}
+
 #btn1 {
     min-width: 250px;
 }
