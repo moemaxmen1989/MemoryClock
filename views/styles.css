@@ -140,6 +140,17 @@ a:hover {
     gap: 2rem;
 }
 
+.main-container .level-container {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.level-container h3 {
+    width: max-content;
+    margin: 1rem auto;
+}
+
 .main-container .grid-container {
     min-height: 100px;
     display: flex;
