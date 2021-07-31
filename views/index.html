@@ -56,7 +56,7 @@
 
         <!--***Section 3 ***-->
         <section class="main-container">
-            <div class="grid-container" id="gridContainer">
+            <div class="grid-container col-6" id="gridContainer">
                 <!-- empty for now -->
                 <!-- Work in progress -->
             </div>
@@ -75,26 +75,6 @@
                     <div class="colored-box hover"></div>
                 </div>
             </template>
-
-            <!-- TEMP CODE -->
-            <script>
-                function getRandomInt(max) {
-                    return Math.floor(Math.random() * max)
-                }
-
-                const template = document.querySelector("#coloredCox")
-                const container = document.querySelector("#gridContainer")
-                const SIZE = 6
-
-                for (let i = 0; i < SIZE; i++) {
-                    console.log("i: ", i)
-                    const clonedBox = template.content.cloneNode(true)
-                    const clonedDiv = clonedBox.querySelector(".colored-box")
-                    clonedDiv.style.backgroundColor = `rgb(${getRandomInt(255)}, ${getRandomInt(255)}, ${getRandomInt(255)})`
-                    console.log("clonedDiv: ", clonedDiv.style)
-                    container.append(clonedBox)
-                }
-            </script>
         </section>
         <!--Timer-->
         <!---->
@@ -123,4 +103,5 @@
         <div id="footer">&copy; All rights reserved</div>
     </body>
     <script src="/views/main.js"></script>
+    <script src="./game.js" defer></script>
 </html>
