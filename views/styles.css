@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap");
 
 body {
-    background-color: #055052;
+    background-color: var(--primary-color);
     font-family: "Comfortaa", cursive;
-    color: white;
+    color: var(--primary-text-color);
     margin: 0;
     font-weight: bolder;
 }
@@ -34,19 +34,19 @@ body {
 
 .navbar a {
     text-decoration: none;
-    color: white;
+    color: var(--primary-text-color);
     margin: 0 10px;
     font-size: 1rem;
     padding: 10px;
 }
 
 a:hover {
-    border: 2px solid white;
+    border: 2px solid var(--primary-text-color);
     border-radius: 15px;
     z-index: 100;
 }
 #start:hover {
-    border: 2px solid white;
+    border: 2px solid var(--primary-text-color);
     border-radius: 15px;
     z-index: 100;
 }
@@ -62,7 +62,6 @@ a:hover {
 .btn {
     min-width: 70px;
     border: none;
-    color: white;
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
@@ -76,13 +75,13 @@ a:hover {
 }
 
 .start {
-    background-color: #53b8bb;
+    background-color: var(--primary-accent);
     color: black;
-    border: 2px solid #4caf50;
+    border: 2px solid var(--secondary-accent);
 }
 
 .btn.start:hover {
-    background-color: #f3f2c9;
+    background-color: var(--secondary-color);
     color: black;
 }
 
@@ -96,6 +95,10 @@ a:hover {
     font-size: 20px;
     padding: 5px auto;
     text-align: center;
+}
+
+.input1.error {
+    border-color: rgb(250, 101, 101);
 }
 
 #btn1 {
@@ -112,7 +115,7 @@ a:hover {
     display: none;
 }
 .topnav a {
-    color: white;
+    color: var(--primary-text-color);
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
@@ -120,7 +123,7 @@ a:hover {
 }
 
 .topnav a.icon {
-    background: black;
+    background: var(--secondary-text-color);
     display: block;
     position: absolute;
     right: 0;
@@ -141,10 +144,22 @@ a:hover {
     gap: 2rem;
 }
 
+.main-container .level-container {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.level-container h3 {
+    width: max-content;
+    margin: 1rem auto;
+}
+
 .main-container .grid-container {
     min-height: 100px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     gap: 2rem;
 }
 
@@ -154,7 +169,7 @@ a:hover {
 }
 
 .main-container .grid-container .colored-box-container .colored-box {
-    width: 100%;
+    width: 150px;
     aspect-ratio: 1 / 1;
     margin: auto;
     border-radius: 1rem;
@@ -200,25 +215,21 @@ a:hover {
 .btn-submit:active {
     transform: scale(0.98);
 }
-/*---------------Section 4----------------------Footer*/ 
+/*---------------Section 4----------------------Footer*/
 
-.footer{
-max-width: 1080px;
-margin: 40px auto;
-display: flex;
-justify-content:center;
-gap:2rem;
-
+.footer {
+    max-width: 1080px;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 #footer {
-    
     bottom: 0px;
-    background-color:transparent;
+    background-color: transparent;
     width: 100%;
     text-align: left;
 }
-
-
 
 /*media queries*/
 /* Extra Extra small devices (phones, 320px and down) */
@@ -227,8 +238,7 @@ gap:2rem;
         font-size: 1.75rem;
     }
 
-    .footer{
-
+    .footer {
         display: none;
     }
 }
@@ -284,15 +294,9 @@ gap:2rem;
         margin-left: 10px;
     }
 
-
-
-    .footer{
-
+    .footer {
         display: none;
     }
-
-
-    
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

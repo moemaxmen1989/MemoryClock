@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: #055052;
+    --secondary-color: #f3f2c9;
+    --primary-accent: #53b8bb;
+    --secondary-accent: #4caf50;
+    --primary-text-color: #fdfdfd;
+    --secondary-text-color: #222;
+}
+
 button {
     font-family: inherit;
 }
@@ -25,7 +34,12 @@ img {
 }
 
 .btn {
-    background-color: #f3f2c9;
+    color: var(--secondary-text-color);
+    background-color: var(--secondary-color);
     outline: none;
     border: none;
+}
+
+.hidden {
+    display: none !important;
 }
