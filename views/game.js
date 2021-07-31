@@ -13,17 +13,22 @@
  * @param setPlayerName     This sets the name of the current player
  */
 class Game {
+    #gameState
+    #gameStateEvent
+    #gameScore
+    #playerName
+
     constructor() {
-        this.gameState = 0
-        this.gameStateEvent = new Event("gameState")
-        this.gameScore = {}
-        this.playerName = null
+        this.#gameState = 0
+        this.#gameStateEvent = new Event("gameState")
+        this.#gameScore = {}
+        this.#playerName = null
     }
 
     advanceGameState() {
-        if (this.gameState !== 3) {
-            this.gameState += 1
-            document.dispatchEvent(this.gameStateEvent)
+        if (this.#gameState !== 3) {
+            this.#gameState += 1
+            document.dispatchEvent(this.#gameStateEvent)
             return true
         }
 
@@ -31,23 +36,23 @@ class Game {
     }
 
     getGameState() {
-        return this.gameState
+        return this.#gameState
     }
 
     setScore(level, score) {
-        this.gameScore[level] = score
+        this.#gameScore[level] = score
     }
 
     reset() {
-        this.gameScore = {}
-        this.playerName = null
+        this.#gameScore = {}
+        this.#playerName = null
     }
 
     setPlayerName(name) {
         const trimmedName = name.trim()
         if (trimmedName === "") return false
 
-        this.playerName = trimmedName
+        this.#playerName = trimmedName
         return true
     }
 }
