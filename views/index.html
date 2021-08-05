@@ -57,18 +57,36 @@
         <!--***Section 3 ***-->
         <section class="main-container hidden" id="gameContainer">
             <div class="level-container">
-                <h3>Level 1</h3>
+                <h3>
+                    Level
+                    <span class="level" id="level">1</span>
+                </h3>
             </div>
+
+            <div class="level-info">
+                <div class="iconed-label">
+                    <i class="fas fa-heart"></i>
+                    <p id="lives">0</p>
+                    lives remaining
+                </div>
+
+                <div class="iconed-label">
+                    <i class="fas fa-bullseye"></i>
+                    <p id="score">0</p>
+                    points
+                </div>
+            </div>
+
             <div class="grid-container col-6" id="gridContainer">
                 <!-- empty for now -->
                 <!-- Work in progress -->
             </div>
 
             <div class="actions">
-                <button type="button" class="btn btn-submit">Submit</button>
-                <div class="timer">
+                <button type="button" id="game-submit" class="btn btn-submit">Submit</button>
+                <div class="timer" id="timerContainer">
                     <i class="fas fa-clock"></i>
-                    <p id="timer">30</p>
+                    <p id="timer">0</p>
                     seconds
                 </div>
             </div>
@@ -78,6 +96,22 @@
                     <div class="colored-box hover"></div>
                 </div>
             </template>
+        </section>
+        <section class="main-container hidden" id="failContainer">
+            <div class="message-container">
+                <h5>You lost the game :/</h5>
+                <button type="button" onclick="restartHandler()" class="btn btn-submit">Restart Game</button>
+            </div>
+        </section>
+        <section class="main-container hidden" id="successContainer">
+            <div class="message-container">
+                <h5>
+                    You have won the game with the score of
+                    <p id="successScore">0</p>
+                    !!
+                </h5>
+                <button type="button" onclick="restartHandler()" class="btn btn-submit">Restart Game</button>
+            </div>
         </section>
         <!---->
 

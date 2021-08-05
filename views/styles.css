@@ -144,10 +144,44 @@ a:hover {
     gap: 2rem;
 }
 
-.main-container .level-container {
+.main-container .level-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconed-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.iconed-label p {
+    margin: 0;
+}
+
+.main-container .message-container {
     width: 100%;
     text-align: center;
     font-size: 2rem;
+}
+
+.message-container h5 {
+    width: max-content;
+    margin: 1rem auto;
+    display: flex;
+}
+
+.message-container h5 p {
+    margin: 0;
+    margin-left: 0.5rem;
+}
+
+.main-container .level-container {
+    width: max-content;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2rem;
+    display: flex;
 }
 
 .level-container h3 {
@@ -155,11 +189,14 @@ a:hover {
     margin: 1rem auto;
 }
 
+.level-container h3 .level {
+    margin-left: 0.8rem;
+}
+
 .main-container .grid-container {
     min-height: 100px;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 2rem;
 }
 
@@ -209,7 +246,11 @@ a:hover {
     transition: filter 0.15s ease-in-out;
     transition: transform 0.1s ease-in-out;
 }
-.btn-submit:hover {
+.btn-submit:disabled {
+    background-color: #ddd;
+    cursor: default;
+}
+.btn-submit:not([disabled]):hover {
     filter: brightness(0.93);
 }
 .btn-submit:active {
