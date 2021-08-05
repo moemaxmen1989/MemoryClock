@@ -1,0 +1,29 @@
+.premium {
+
+   margin:40px auto;
+   
+    display: flex;
+
+    gap:40px;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+
+
+
+}
+
+
+.login-form{
+
+
+    display: grid;
+    gap:2rem;
+
+
+    border:1px solid white;
+    padding:20px 40px;
+    border-radius:5px;
+}
